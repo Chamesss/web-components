@@ -36,13 +36,6 @@
   }
 }
 
-.swiper-slide img {
-  width: 37rem;
-  height: 42rem;
-  border-radius: 2rem;
-  object-fit: cover;
-}
-
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
