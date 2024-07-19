@@ -1,5 +1,6 @@
 "use client"
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,11 +11,21 @@ import 'swiper/css/pagination';
 
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
+const placeHolderImages = [
+    '/images/img_1.jpg',
+    '/images/img_2.jpg',
+    '/images/img_3.jpg',
+    '/images/img_4.jpg',
+    '/images/img_5.jpg',
+    '/images/img_6.jpg',
+    '/images/img_7.jpg',
+]
+
 
 export default function SwiperComponent() {
   return (
     <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+      <h1 className="heading my-4">Swiper Slider 3D Coverflow</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -35,27 +46,18 @@ export default function SwiperComponent() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        <SwiperSlide>
-          <img src={'/images/img_1.jpg'} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={'/images/img_2.jpg'} alt="slide_image" />
-        </SwiperSlide>
-       <SwiperSlide>
-          <img src={'/images/img_3.jpg'} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={'/images/img_4.jpg'} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={'/images/img_5.jpg'} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={'/images/img_6.jpg'} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={'/images/img_7.jpg'} alt="slide_image" />
-        </SwiperSlide>
+       {placeHolderImages.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <Image
+                            src={image}
+                            alt="slide_image"
+                            className="slide_image"
+                            width={1024}
+                            height={1024}
+                            priority={true}
+                        />
+                    </SwiperSlide>
+                ))}
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
