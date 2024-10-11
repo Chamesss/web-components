@@ -6,11 +6,9 @@ import RangerComponent from './components/tanstack-ranger/ranger'
 
 export default function page() {
     return (
-        <main className="">
+        <main className="mx-auto mb-[50rem] flex w-full max-w-[90rem] flex-col items-center">
             <SwiperCoverFlowComponent />
-            {/* <SwiperComponent /> */}
-            {/* <ParallaxScroll /> */}
-            {/* <RangerComponent /> */}
+            <ParallaxScroll />
         </main>
     )
 }
