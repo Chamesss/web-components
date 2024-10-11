@@ -45,6 +45,7 @@ export default function ParallaxScroll() {
         return () => {
             window.removeEventListener('scroll', handleScroll)
             if (containerRef.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(containerRef.current)
             }
         }
@@ -53,7 +54,7 @@ export default function ParallaxScroll() {
     return (
         <div
             ref={containerRef}
-            className="relative h-[150vh] w-full overflow-hidden rounded-sm"
+            className="relative h-[150vh] w-screen overflow-hidden rounded-sm"
             style={{
                 backgroundImage: `url(${backgroundImage.src})`,
                 backgroundSize: 'cover',
