@@ -60,6 +60,10 @@ export default function ParallaxScroll() {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
+                backgroundPositionX: 'center',
+                backgroundPositionY: 'center',
+                backgroundClip: 'border-box',
+                backgroundOrigin: 'padding-box',
             }}
         >
             <div className="absolute left-1/2 top-1/2 z-[2] h-[150vh] w-screen -translate-x-1/2 -translate-y-1/2 bg-black/50" />
