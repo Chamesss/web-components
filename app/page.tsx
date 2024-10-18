@@ -1,5 +1,6 @@
 import React from 'react'
 import ParallaxScroll from './components/parallax-scroll/parallax-scroll'
+import PricingCards from './components/pricing-cards/pricing-cards'
 import MainScrollOnTrigger from './components/scroll-triggered/main'
 import SwiperCoverFlowComponent from './components/swiper-3d-coverflow/main'
 import SwiperComponent from './components/swiper/swiper'
@@ -11,6 +12,7 @@ export default function page() {
             <SwiperCoverFlowComponent />
             <ParallaxScroll />
             <MainScrollOnTrigger />
+            <PricingCards />
         </main>
     )
 }

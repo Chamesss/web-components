@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,6 +21,7 @@ export default function RootLayout({
                 <div className="max-w-screen overflow-hidden bg-muted">
                     {children}
                 </div>
+                <Toaster position="bottom-right" reverseOrder={false} />
             </body>
         </html>
     )
