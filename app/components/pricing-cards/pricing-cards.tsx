@@ -15,7 +15,7 @@ export default function PricingCards() {
                 defaultValue="monthly"
                 className="flex w-[400px] justify-center"
             >
-                <TabsList className="mx-auto bg-neutral-900">
+                <TabsList className="mx-auto bg-neutral-200">
                     <TabsTrigger value="monthly">Monthly</TabsTrigger>
                     <TabsTrigger value="yearly">Yearly</TabsTrigger>
                 </TabsList>
