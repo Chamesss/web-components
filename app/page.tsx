@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimatedCardFlipGallery from './components/animated-flip-card/animated-flip-cards'
+import MonthlyGranttChart from './components/gantt-chart/gantt-chart'
 import ParallaxScroll from './components/parallax-scroll/parallax-scroll'
 import PricingCards from './components/pricing-cards/pricing-cards'
 import MainScrollOnTrigger from './components/scroll-triggered/main'
@@ -20,6 +21,7 @@ export default function page() {
             <PricingCards />
             <AnimatedCardFlipGallery />
             <TimelineScroll />
+            <MonthlyGranttChart />
         </main>
     )
 }

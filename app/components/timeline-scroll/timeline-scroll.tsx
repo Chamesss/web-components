@@ -215,9 +215,9 @@ export default function TimelineScroll() {
                                                         })()}
                                                     <span>{event.title}</span>
                                                 </h2>
-                                                <p className="py-4 text-gray-300">
+                                                <span className="py-4 text-gray-300">
                                                     {event.description}
-                                                </p>
+                                                </span>
                                             </div>
                                         </div>
                                         {index < timelineEvents.length - 1 && (
