@@ -1,12 +1,11 @@
 import React from 'react'
 import AnimatedCardFlipGallery from './components/animated-flip-card/animated-flip-cards'
 import MonthlyGranttChart from './components/gantt-chart/gantt-chart'
+import Marquee from './components/marquee/marquee'
 import ParallaxScroll from './components/parallax-scroll/parallax-scroll'
 import PricingCards from './components/pricing-cards/pricing-cards'
 import MainScrollOnTrigger from './components/scroll-triggered/main'
 import SwiperCoverFlowComponent from './components/swiper-3d-coverflow/main'
-import SwiperComponent from './components/swiper/swiper'
-import RangerComponent from './components/tanstack-ranger/ranger'
 import TimelineScroll from './components/timeline-scroll/timeline-scroll'
 
 export default function page() {
@@ -21,7 +20,8 @@ export default function page() {
             <PricingCards />
             <AnimatedCardFlipGallery />
             <TimelineScroll />
-            <MonthlyGranttChart />
+            {/* <MonthlyGranttChart /> */}
+            <Marquee pauseOnHover={true} />
         </main>
     )
 }

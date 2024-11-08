@@ -55,17 +55,13 @@ export default function ParallaxScroll() {
         <div
             ref={containerRef}
             className="relative h-[150vh] w-screen overflow-hidden rounded-sm"
-            style={{
-                backgroundImage: `url(${backgroundImage.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed',
-            }}
         >
-            <div className="absolute left-1/2 top-1/2 z-[2] h-[150vh] w-screen -translate-x-1/2 -translate-y-1/2 bg-black/50" />
+            <div className="absolute left-1/2 top-1/2 z-[2] h-[150vh] w-screen -translate-x-1/2 -translate-y-1/2 bg-sky-950">
+                <div className="noisy-small" />
+            </div>
             <div
                 ref={fastLayerRef}
-                className="absolute -top-[25%] right-5 z-[5] h-1/4 w-1/2 rounded-sm lg:h-1/3 lg:w-1/3"
+                className="absolute -top-[25%] right-5 z-[5] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/3 lg:w-1/3"
                 style={{
                     backgroundImage: `url(${left.src})`,
                     backgroundSize: 'cover',
@@ -74,7 +70,7 @@ export default function ParallaxScroll() {
             />
             <div
                 ref={reversibleLayerRef}
-                className="absolute -bottom-[0%] left-0 right-0 z-[4] mx-auto h-1/6 w-2/3 rounded-sm md:h-1/4 md:w-1/3 lg:w-1/4"
+                className="absolute -bottom-[0%] left-0 right-0 z-[4] mx-auto h-1/6 w-2/3 rounded-sm shadow-2xl md:h-1/4 md:w-1/3 lg:right-10 lg:h-[30%] lg:w-[30%]"
                 style={{
                     backgroundImage: `url(${right.src})`,
                     backgroundSize: 'cover',
@@ -83,7 +79,7 @@ export default function ParallaxScroll() {
             />
             <div
                 ref={slowLayerRef}
-                className="absolute -top-[0%] left-5 z-[3] h-1/4 w-1/2 rounded-sm lg:h-1/2"
+                className="absolute -top-[0%] left-5 z-[3] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/2"
                 style={{
                     backgroundImage: `url(${middle.src})`,
                     backgroundSize: 'cover',

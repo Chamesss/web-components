@@ -29,7 +29,7 @@ export default function Project({
             }}
             className="group mb-3 last:mb-0 sm:mb-8"
         >
-            <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 sm:h-[20rem] sm:pr-2 sm:group-even:pl-8">
+            <section className="relative max-w-[42rem] overflow-hidden rounded-lg border border-black/5 bg-white transition hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 sm:h-[20rem] sm:pr-2 sm:group-even:pl-8">
                 <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:ml-[1rem] sm:max-w-[55%] sm:pl-5 sm:pr-5 sm:pt-9 sm:group-even:ml-[17rem] sm:group-even:max-w-[60%] sm:group-even:pl-10">
                     <div className="mb-2 flex w-full flex-row items-center justify-between">
                         <h3 className="text-2xl font-semibold">{title}</h3>
