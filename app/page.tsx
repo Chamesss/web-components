@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimatedCardFlipGallery from './components/animated-flip-card/animated-flip-cards'
+import Gantt from './components/gantt-chart-v2/main'
 import MonthlyGranttChart from './components/gantt-chart/gantt-chart'
 import Marquee from './components/marquee/marquee'
 import ParallaxScroll from './components/parallax-scroll/parallax-scroll'
@@ -22,6 +23,7 @@ export default function page() {
             <TimelineScroll />
             {/* <MonthlyGranttChart /> */}
             <Marquee pauseOnHover={true} />
+            <Gantt />
         </main>
     )
 }
