@@ -10,10 +10,13 @@ export default function PricingCards() {
     const [isFlipped, setIsFlipped] = useState<PriceMode>('monthly')
     return (
         <div className="flex flex-col items-center">
+            <h1 className="mt-8 w-full text-center text-4xl font-semibold">
+                Pricing Cards
+            </h1>
             <Tabs
                 onValueChange={(e: string) => setIsFlipped(e as PriceMode)}
                 defaultValue="monthly"
-                className="flex w-[400px] justify-center"
+                className="mt-8 flex w-[400px] justify-center"
             >
                 <TabsList className="mx-auto bg-neutral-200">
                     <TabsTrigger value="monthly">Monthly</TabsTrigger>

@@ -52,40 +52,51 @@ export default function ParallaxScroll() {
     }, [])
 
     return (
-        <div
-            ref={containerRef}
-            className="relative h-[150vh] w-screen overflow-hidden rounded-sm"
-        >
-            <div className="absolute left-1/2 top-1/2 z-[2] h-[150vh] w-screen -translate-x-1/2 -translate-y-1/2 bg-sky-950">
-                <div className="noisy-small" />
+        <div>
+            <h1 className="my-8 w-full text-center text-4xl font-semibold">
+                Parallax Scroll
+            </h1>
+            <div
+                ref={containerRef}
+                className="relative h-[100vh] w-screen overflow-hidden rounded-sm lg:h-[150vh]"
+            >
+                <div
+                    style={{
+                        backgroundImage:
+                            "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80')",
+                        // y: backgroundY,
+                        backgroundAttachment: 'fixed',
+                    }}
+                    className="absolute left-1/2 top-1/2 z-[2] h-[150vh] w-screen -translate-x-1/2 -translate-y-1/2 scale-125 bg-sky-950 blur-2xl"
+                />
+                <div
+                    ref={fastLayerRef}
+                    className="absolute -top-[25%] right-5 z-[5] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/3 lg:w-1/3"
+                    style={{
+                        backgroundImage: `url(${left.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'end',
+                    }}
+                />
+                <div
+                    ref={reversibleLayerRef}
+                    className="absolute -bottom-[0%] left-0 right-0 z-[4] mx-auto h-1/6 w-2/3 rounded-sm shadow-2xl md:h-1/4 md:w-1/3 lg:right-10 lg:h-[30%] lg:w-[30%]"
+                    style={{
+                        backgroundImage: `url(${right.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                />
+                <div
+                    ref={slowLayerRef}
+                    className="absolute -top-[0%] left-5 z-[3] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/2"
+                    style={{
+                        backgroundImage: `url(${middle.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                />
             </div>
-            <div
-                ref={fastLayerRef}
-                className="absolute -top-[25%] right-5 z-[5] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/3 lg:w-1/3"
-                style={{
-                    backgroundImage: `url(${left.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'end',
-                }}
-            />
-            <div
-                ref={reversibleLayerRef}
-                className="absolute -bottom-[0%] left-0 right-0 z-[4] mx-auto h-1/6 w-2/3 rounded-sm shadow-2xl md:h-1/4 md:w-1/3 lg:right-10 lg:h-[30%] lg:w-[30%]"
-                style={{
-                    backgroundImage: `url(${right.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
-            />
-            <div
-                ref={slowLayerRef}
-                className="absolute -top-[0%] left-5 z-[3] h-1/4 w-1/2 rounded-sm shadow-2xl lg:h-1/2"
-                style={{
-                    backgroundImage: `url(${middle.src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
-            />
         </div>
     )
 }

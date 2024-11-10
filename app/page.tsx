@@ -13,7 +13,7 @@ export default function page() {
     return (
         <main
             id="main"
-            className="mx-auto mb-[50rem] flex w-full max-w-[90rem] flex-col items-center space-y-8"
+            className="mx-auto mb-[50rem] flex w-full max-w-[90rem] flex-col items-center space-y-20"
         >
             <SwiperCoverFlowComponent />
             <ParallaxScroll />
