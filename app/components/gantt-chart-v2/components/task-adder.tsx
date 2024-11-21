@@ -21,7 +21,7 @@ export default function TaskAdder() {
         from: new Date(),
         to: addDays(new Date(), 1),
     })
-    const { addTask } = useGanttStore()
+    //const { addTask } = useGanttStore()
 
     useEffect(() => {
         if (isModalOpen) {
@@ -34,16 +34,16 @@ export default function TaskAdder() {
         }
     }, [isModalOpen])
 
-    function handleAddTask() {
-        addTask({
-            id: Math.random().toString(36).substr(2, 9),
-            title: 'New Task',
-            start: date?.from || new Date(),
-            end: date?.to || addDays(new Date(), 1),
-            progress: 0,
-        })
-        setIsModalOpen(false)
-    }
+    // function handleAddTask() {
+    //     addTask({
+    //         id: Math.random().toString(36).substr(2, 9),
+    //         title: 'New Task',
+    //         start: date?.from || new Date(),
+    //         end: date?.to || addDays(new Date(), 1),
+    //         progress: 0,
+    //     })
+    //     setIsModalOpen(false)
+    // }
 
     return (
         <div>
@@ -152,7 +152,7 @@ export default function TaskAdder() {
                             </div>
                             <div className="mt-4">
                                 <button
-                                    onClick={handleAddTask}
+                                    //onClick={handleAddTask}
                                     className="w-full rounded-lg bg-blue-500 py-2 text-white"
                                 >
                                     Add Task

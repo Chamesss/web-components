@@ -39,6 +39,7 @@ export const useGanttStore = create<
         setDragState: (state: DragState) => void
         updateTaskDates: (taskId: string, start: Date, end: Date) => void
         updateTaskProgress: (taskId: string, progress: number) => void
+        //addTask: (task) => void
         setViewMode: (mode: ViewMode) => void
         setSelectedTask: (taskId: string | null) => void
         addDependency: (taskId: string, dependencyId: string) => void
