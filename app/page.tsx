@@ -1,6 +1,5 @@
 import React from 'react'
 import AnimatedCardFlipGallery from './components/animated-flip-card/animated-flip-cards'
-import LandingPage from './components/exeperimental-tailwindcss-components/landing-page'
 import Gantt from './components/gantt-chart-v2/main'
 import MonthlyGranttChart from './components/gantt-chart/gantt-chart'
 import Marquee from './components/marquee/marquee'
